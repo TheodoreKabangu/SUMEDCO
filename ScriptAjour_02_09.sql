@@ -10,3 +10,12 @@ CREATE TABLE [dbo].[LigneRequisitionAutre] (
     PRIMARY KEY CLUSTERED ([idrequisition] ASC),
     FOREIGN KEY ([idproduit]) REFERENCES [dbo].[ProduitAutreStock] ([idproduit])
 );
+--sur la BD SSM_Malade
+
+CREATE TABLE Prescription (
+idpresc int primary key,
+produit varchar(100) not null,
+qtepresc int not null,
+detail varchcar(100) not null,
+FOREIGN KEY (idconsultation) REFERENCES Consultation(idconsultation)
+)
